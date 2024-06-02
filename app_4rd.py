@@ -8,12 +8,9 @@ import sklearn
 import imblearn
 
 # Load pre-trained model and input features
-try:
-    Inputs = joblib.load("Inputs.pkl")
-    Model = joblib.load("Model.pkl")
-except Exception as e:
-    st.error(f"Error loading model or inputs: {e}")
-    st.stop()
+# Load pre-trained model and input features
+Inputs = joblib.load("Inputs.pkl")
+Model = joblib.load("Model.pkl")
 
 # Define the prediction function
 def prediction(Customer_Segment, Bill_Cycle, Current_Status, Live_Contracts,
